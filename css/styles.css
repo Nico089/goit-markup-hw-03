@@ -21,6 +21,44 @@ footer {
   --address-color: rgba(255, 255, 255, 0.6);
 }
 
+h1,
+h2,
+h3,
+h4,
+ul,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.section {
+  padding-top: 94px;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 /*Logo style*/
 .logo {
   font-family: 'Raleway', sans-serif;
@@ -30,6 +68,8 @@ footer {
 
   text-decoration: none;
   color: var(--brand-color);
+
+  display: block;
 }
 
 .logo-black {
@@ -41,21 +81,30 @@ footer {
 }
 
 /*Site navigation*/
-.navigation {
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
-.list {
-  list-style: none;
+
+.header-page {
+  display: flex;
+  align-items: center;
 }
 
-.link {
-  text-decoration: none;
+.navigation {
+  display: flex;
+  margin-left: 93px;
+}
+
+.navigation .item:not(:last-child) {
+  margin-right: 40px;
 }
 
 .navigation .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--header-color);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 
 .navigation .link:hover,
@@ -69,6 +118,9 @@ footer {
 
 /*Contacts*/
 .contacts {
+  display: flex;
+  margin-left: auto;
+
   font-style: normal;
   font-weight: 500;
   line-height: 1.14;
@@ -76,21 +128,30 @@ footer {
   list-style: none;
 }
 
-.contacts .contacts-link {
-  text-decoration: none;
+.contacts .link {
+  padding-top: 32px;
+  padding-bottom: 32px;
 
   color: var(--description-color);
 }
 
-.contacts .contacts-link:hover,
-.contacts .contacts-link:focus {
+.contacts .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contacts .link:hover,
+.contacts .link:focus {
   text-decoration: none;
 
   color: var(--brand-color);
 }
 /*Section*/
-.section {
+
+.section.one {
   background: var(--background-dark);
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .header-one {
@@ -104,6 +165,14 @@ footer {
   text-transform: uppercase;
 
   color: var(--white-color);
+
+  margin-bottom: 30px;
+
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 696px;
 }
 
 /*Button*/
@@ -114,7 +183,6 @@ footer {
   font-size: 16px;
   line-height: 1.88;
 
-  display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
@@ -124,21 +192,27 @@ footer {
   background: var(--brand-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  border-width: 0;
+  border: transparent;
+
+  padding: 10px 32px;
+  min-width: 216px;
 
   cursor: pointer;
 }
+
+/*Section two*/
 
 .header-two {
   font-weight: 700;
   font-size: 36px;
   line-height: 42px;
+  text-align: center;
 
   color: var(--header-color);
+
+  margin-top: 94px;
+  margin-bottom: 50px;
 }
-
-/*Section two*/
-
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -152,7 +226,10 @@ footer {
   margin: -1px;
 }
 
-/*Section three*/
+.description-list {
+  display: flex;
+}
+
 .header-three {
   font-weight: 700;
   line-height: 1.14;
@@ -165,7 +242,15 @@ footer {
   line-height: 1.71;
 
   color: var(--description-color);
+  width: 270px;
+  display: inline-block;
 }
+
+.description-list .item:not(:last-child) {
+  padding-right: 30px;
+}
+
+/*Section three*/
 
 /*Sectoin four*/
 
@@ -177,6 +262,8 @@ footer {
   text-align: center;
 
   color: var(--header-color);
+
+  margin-bottom: 10px;
 }
 
 .card-description {
@@ -214,6 +301,7 @@ footer {
 /*Page portfolio*/
 
 .portfolio-buttons {
+  display: inline-block;
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -221,15 +309,16 @@ footer {
   text-align: center;
   color: var(--header-color);
 
-  border-width: 0;
-
+  min-width: 73px;
+  padding: 6px 22px;
+  border-radius: 4px;
+  border: transparent;
   cursor: pointer;
 }
 .portfolio-buttons:hover,
 .portfolio-buttons:focus {
   color: var(--white-color);
   background: var(--brand-color);
-  border-radius: 4px;
 }
 
 .portfolio-header {
